@@ -2,7 +2,7 @@
 
 /**
  * main - execution starts
- * 2-print_alphabet_x10
+ * Description- printing_alphabet_x10
  * Return: Always 0 indicating success
  */
 
