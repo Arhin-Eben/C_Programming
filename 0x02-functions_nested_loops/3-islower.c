@@ -2,7 +2,8 @@
 
 /**
  * main - check the code.
- *task 3-solved
+ *Description: this have been added to the file
+ *@parameter: it's returning A number
  * Return: Always 0.
  */
 
@@ -14,5 +15,4 @@ int _islower(int c)
 	}
 
 	return (0);
-}
-		
+}	

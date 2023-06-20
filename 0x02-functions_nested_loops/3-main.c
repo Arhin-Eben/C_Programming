@@ -2,7 +2,8 @@
 
 /**
  * main - check the code.
- *
+ *Description: this have been added to the files
+ *@parameter: it's returning nothing
  * Return: Always 0.
  */
 
