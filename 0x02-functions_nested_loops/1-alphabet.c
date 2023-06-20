@@ -1,21 +1,17 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * second task in C
- * Return: Always 0 indicating success
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 {
-	int i;
-
-	for (i = 97; i <= 122; i++)
+	char c;
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		_putchar(i);
+		_putchar(c);
 	}
-
 	_putchar('\n');
-
-	return (0);
 }
