@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet - prints the lowercase alphabet followed by a newline
  *
- * Return: Always 0.
+ * This function prints the lowercase alphabet followed by a newline character
+ * using the _putchar function. The alphabet is printed in order from 'a' to 'z',
+ * with each character printed on a new line.
  */
 
 void print_alphabet(void)
