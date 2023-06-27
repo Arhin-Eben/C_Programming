@@ -21,7 +21,7 @@ int main(void)
 	fib2 = next;
 	}
 
-	printf("%ldn", sum);
+	printf("%ld\n", sum);
 
 	return (0);
 }
