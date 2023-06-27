@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * main - generates a random valid password for the program 101-crackme
+ *
+ * Return: Always 0 (Success)
+ */
+
 #define MIN_PASS_LENGTH 10
 #define MAX_PASS_LENGTH 16
 
