@@ -2,28 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void)
-{
-    char password[7]; // 6 character password + null terminator
-    int i, random;
+#define MIN_PASS_LENGTH 10
+#define MAX_PASS_LENGTH 16
 
-    srand(time(NULL)); // seed the random number generator with the current time
+char valid_chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-    for (i = 0; i < 6; i++) {
-        random = rand() % 62; // generate a random number between 0 and 61
-        if (random < 26) {
-            password[i] = 'A' + random; // if random is less than 26, add a random uppercase letter
-        } else if (random < 52) {
-            password[i] = 'a' + random - 26; // if random is between 26 and 51, add a random lowercase letter
-        } else {
-            password[i] = '0' + random - 52; // if random is between 52 and 61, add a random digit
-        }
-    }
+int main(void) {
+	int i, pass_length;
 
-    password[6] = '0'; // add null terminator to the end of the password string
+	char password[MAX_PASS_LENGTH + 1];
 
-    printf("%sn", password); // print the generated password
+	srand(time(NULL));
 
-    return 0;
+	pass_length = rand() % (MAX_PASS_LENGTH - MIN_PASS_LENGTH + 1) + MIN_PASS_LENGTH;
+
+	for (i = 0; i < pass_length; i++) {
+	password[i] = valid_chars[rand() % (sizeof(valid_chars) - 1)];
+	}
+
+	password[pass_length] = '0';
+
+	printf("%sn", password);
+
+	return 0;
 }
 
