@@ -1,45 +1,28 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 98 Fibonacci numbers, starting with
- * 1 and 2, separated by a comma followed by a spce.
- * Return: Always 0.
+ * main - prints the sum of even-valued terms in the Fibonacci sequence
+ *        whose values do not exceed 4,000,000
+ *
+ * Return: Always 0
  */
-
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	unsigned long fib1_half1, hal1, half2, fib1_half2, fib2_half1, fib2_half2;
+	int i;
+	long int fib1 = 1, fib2 = 2, next, sum = 0;
 
-	for (count = 0; count < 92; count++)
+	while (fib1 <= 4000000)
 	{
-	sum = fib1 + fib2;
-	printf("%lu, ", sum);
+	if (fib1 % 2 == 0)
+	sum += fib1;
+
+	next = fib1 + fib2;
 	fib1 = fib2;
-	fib2 = sum;
+	fib2 = next;
 	}
-	fib1_half1 = fib1 / 10000000000;
-	fib2_half1 = fib2 / 10000000000;
-	fib1_half2 = fib1 % 10000000000;
-	fib2_half2 = fib2 % 10000000000;
-	for (count = 93; count < 99; count++)
-	{
-	half1 = fib1_half1 + fib2_half1;
-	half2 = fib1_half2 + fib2_half2;
-	if (fib1_half2 + fib2_half2 > 9999999999)
-	{
-	half1 += 1;
-	half2 %= 10000000000;
-	}
-	printf("%lu%lu", half1, half2);
-	if (count != 98)
-	printf(", ");
-	fib1_half1 = fib2_half1;
-	fib1_half2 = fib2_half2;
-	fib2_half1 = half1;
-	fib2_half2 = half2;
-	}
-	printf("\n");
+
+	printf("%ldn", sum);
+
 	return (0);
 }
+
