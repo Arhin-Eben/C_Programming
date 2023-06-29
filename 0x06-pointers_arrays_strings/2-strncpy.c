@@ -1,11 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 /**
-**_strncpy - function that copies a string
-*@n: number to check
-*@i: actual loop counter
-*Return - desk string
-*/
+ * _strncpy - Copy a string
+ * @dest: Destination string
+ * @src: Source string
+ * @n: Number of bytes to copy
+ *
+ * Return: Pointer to the destination string
+ */
 
 char *_strncpy(char *dest, char *src, int n)
 {
