@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 /**
  * rot13 - Encodes a string using the ROT13 cipher.
  * @str: The string to be encoded.
@@ -11,7 +11,7 @@ char *rot13(char *str)
 	char *ptr = str;
 
 	if (str == NULL)
-	return NULL;
+	return (NULL);
 
 	for (; *ptr != '0'; ptr++)
 	{
